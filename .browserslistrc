@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Browsers that we support
+#
+# For help and understand check this two urls:
+#
+# https://github.com/browserslist/browserslist#browserslist-
+# http://browserl.ist/
+#
+#-----------------------------------------------------------
+
+> 1%
+Last 2 versions
+IE 10 # sorry
