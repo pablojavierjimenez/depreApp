@@ -1,0 +1,54 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darksalmon;
+  padding: 0;
+}
+
+header,
+footer {
+  color: white;
+  background-color: black;
+  padding: 1vw;
+  height: 7vh;
+}
+
+footer {
+  display:
+}
+main {
+  max-width: 960px;
+  margin: auto;
+  height: 86vh;
+}
+
+section {
+  margin: 2vw 1vw;
+}
+#calculation_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    #calculation_section {
+      display: block;
+    }
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  background-color: black;
+  color: white;
+}
