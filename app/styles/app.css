@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -35,6 +36,12 @@ section {
   justify-content: space-between;
 }
 
+.resultado {
+      background-color: blueviolet;
+    color: white;
+    padding: 1vmin;
+    text-align: right;
+}
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;

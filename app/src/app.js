@@ -7,6 +7,7 @@ let app = {} || null;
     salaryInitial: document.getElementById('salary_start_inDolars'),
     salaryActual: document.getElementById('salary_actual_inDolars'),
     salaryActualinPesos: document.getElementById('salary_actual_inPesos'),
+    salaryActualinPesosWithOutDevaluation: document.getElementById('salary_actual_inPesos_without_devaluation'),
   };
 
   app.values = {
@@ -15,6 +16,7 @@ let app = {} || null;
     salaryInitialInPesos: 0,
     salaryInitialInDolars: 0,
     salaryfinalInPesos: 0,
+    salaryfinalInPesosWithOutDevaluation: 0,
     salaryfinalInDolars: 0
   };
 
@@ -22,13 +24,16 @@ app.methods = {
   calculate_salary_initial_in_dolars: ( inputDate ) => {
     app.values.dolarValueInitial = app.data.finalData[inputDate];
     app.values.salaryInitialInPesos = app.el.inputSalary.value;
-    return app.values.salaryInitialInPesos / app.values.dolarValueInitial;
+    app.values.salaryInitialInDolars = app.values.salaryInitialInPesos / app.values.dolarValueInitial;
+    return app.values.salaryInitialInDolars;
   },
   calculate_salary_final_in_dolars: () => {
     var date = new Date();
     var month = date.getUTCMonth() + 1;
+    var day = date.getDate();
     month = (month < 10 ) ? '0'+month : month;
-    var today = `${date.getFullYear()}-${month}-${date.getDate()}`;
+    day = (day < 10 ) ? '0'+day : day;
+    var today = `${date.getFullYear()}-${month}-${day}`;
 
     app.values.dolarValuefinal = app.data.finalData[today]
     app.values.salaryInitialInPesos = app.el.inputSalary.value;
@@ -38,6 +43,10 @@ app.methods = {
   calculate_salary_final_in_pesos: () => {
     app.values.salaryfinalInPesos = app.values.salaryfinalInDolars * app.values.dolarValueInitial;
     return app.values.salaryfinalInPesos;
+  },
+  calculate_salary_final_in_pesos_without_devaluation: () => {
+    app.values.salaryfinalInPesosWithOutDevaluation = app.values.salaryInitialInDolars * app.values.dolarValuefinal;
+    return app.values.salaryfinalInPesosWithOutDevaluation;
   },
   recreatData: (newDataFormat, arrData) => {
     if ( newDataFormat === null ) {
@@ -4186,8 +4195,22 @@ app.methods = {
       { "d": "2018-08-27", "v": 31.2 },
       { "d": "2018-08-28", "v": 32 },
       { "d": "2018-08-29", "v": 32.5 },
-      { "d": "2018-08-30", "v": 38.5 },
-      { "d": "2018-08-31", "v": 38.74 }
+      {
+        "d": "2018-08-31",
+        "v": 38.5
+      },
+      {
+        "d": "2018-09-03",
+        "v": 37.5
+      },
+      {
+        "d": "2018-09-04",
+        "v": 38
+      },
+      {
+        "d": "2018-09-05",
+        "v": 37.9
+      }
     ];
   },
   getDataFromLocalStorage: () => {
@@ -4208,7 +4231,6 @@ app.methods = {
       finalData = app.methods.recreatData( localStorage.getItem('finalDataFromLocalStorage'), data);
       localStorage.setItem( 'finalDataFromLocalStorage', JSON.stringify( finalData ) );
     }
-    console.log(finalData);
     return finalData;
   }
 };
@@ -4220,9 +4242,9 @@ app.data = {
 };
 
 app.el.calculateBtn.addEventListener('click', (algo) => {
-  app.el.salaryInitial.innerText = app.methods.calculate_salary_initial_in_dolars(app.el.inputDate.value);
-  app.el.salaryActual.innerText = app.methods.calculate_salary_final_in_dolars();
-  app.el.salaryActualinPesos.innerText = app.methods.calculate_salary_final_in_pesos();
+  app.el.salaryInitial.innerText = app.methods.calculate_salary_initial_in_dolars(app.el.inputDate.value).toFixed(4);
+  app.el.salaryActual.innerText = app.methods.calculate_salary_final_in_dolars().toFixed(4);
+  app.el.salaryActualinPesos.innerText = app.methods.calculate_salary_final_in_pesos().toFixed(4);
+  app.el.salaryActualinPesosWithOutDevaluation.innerText = app.methods.calculate_salary_final_in_pesos_without_devaluation().toFixed(4);
 });
 
-console.log(app);

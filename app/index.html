@@ -21,20 +21,27 @@
           <input type="date" name="start_day" id="start_day">
         </label>
         <label for="start_salary">
-          <span>Sueldo al inicio (en pesos)</span>
+          <span>Sueldo en ese momento (en pesos)</span>
           <input type="number" name="start_salary" id="start_salary">
         </label>
         <button id="calculate">Wanna Cry?</button>
       </div>
       <section id="results">
         <div>
-          <span>Tu sueldo en dolares al ingreso</span><span id="salary_start_inDolars"></span>
+          <span>Tu sueldo en dolares en ese momento</span>
+          <span id="salary_start_inDolars" class="resultado"></span>
         </div>
         <div>
-          <span>Sueldo en dolares Hoy 😥</span><span id="salary_actual_inDolars"></span>
+          <span>Sueldo en dolares Hoy 😥</span>
+          <span id="salary_actual_inDolars" class="resultado"></span>
         </div>
         <div>
-          <h3>Osea hoy en peso 😥</h3><h3 id="salary_actual_inPesos"></h3>
+          <h3>Tu sueldo en dolares hoy pasado a pesos 😥</h3>
+          <h3 id="salary_actual_inPesos" class="resultado"></h3>
+        </div>
+        <div>
+          <h3>Tu sueldo en a pesos, si siguieras ganando lo mismo en dolares 😥</h3>
+          <h3 id="salary_actual_inPesos_without_devaluation" class="resultado"></h3>
         </div>
       </section>
     </section>
