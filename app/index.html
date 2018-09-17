@@ -11,21 +11,26 @@
 </head>
 <body>
   <header>
-    <h1>Depre App</h1>
+    <h1 class="brand">D<span class="yellow_chart">e</span>pre App</h1>
+    <span class="yellow_sun">🌞</span>
   </header>
   <main>
-    <section id="calculation_section">
-      <div>
+    <section id="calculation_section" class="card">
+      <section id="input_data">
         <label for="start_day">
           <span>Fecha de Ingreso</span>
-          <input type="date" name="start_day" id="start_day">
+          <span>
+            <input type="date" name="start_day" id="start_day" class="input" />
+          </span>
         </label>
         <label for="start_salary">
-          <span>Sueldo en ese momento (en pesos)</span>
-          <input type="number" name="start_salary" id="start_salary">
+          <span>Sueldo en ese momento<br/> (en pesos)</span>
+          <span>
+            <input type="number" name="start_salary" id="start_salary" class="input" />
+          </span>
         </label>
-        <button id="calculate">Wanna Cry?</button>
-      </div>
+        <button id="calculate" class="btn_default">Wanna Cry?</button>
+      </section>
       <section id="results">
         <div>
           <span>Tu sueldo en dolares en ese momento</span>
@@ -40,13 +45,14 @@
           <h3 id="salary_actual_inPesos" class="resultado"></h3>
         </div>
         <div>
-          <h3>Tu sueldo en a pesos, si siguieras ganando lo mismo en dolares 😥</h3>
+          <h3>Tu sueldo en a pesos, si continuaras ganando lo mismo en dolares 😥</h3>
           <h3 id="salary_actual_inPesos_without_devaluation" class="resultado"></h3>
         </div>
       </section>
     </section>
 
-    <section id="slary_range_list">
+    <section id="slary_range_list" class="card">
+      <h3>Escala salarial</h3>
       <div>para un sueldo de 10.000 --> 8300</div>
       <div>para un sueldo de 20.000 --> 16600</div>
       <div>para un sueldo de 30.000 --> 24900</div>
