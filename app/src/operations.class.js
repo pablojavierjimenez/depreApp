@@ -72,21 +72,4 @@ export class Operations {
     return this.values.salaryfinalInPesosWithOutDevaluation;
   }
 
-  _helpers() {
-    // los pongo aca para que no rompan nada mas
-    // (newDataFormat[20180905] != undefined ) ? newDataFormat[20180905] : newDataFormat[newDataFormat.length -1 ];
-    // _recreatData ( newDataFormat, arrData ) {
-    //   if (newDataFormat === null) {
-    //     var newDataFormat = new Array();
-
-    //     arrData.map((item) => {
-    //       var itemId = item.d.replace(new RegExp('-', 'g'), '');
-    //       var newItem ={};
-    //       newItem[item.d] = item.v;
-    //       newDataFormat[itemId] = newItem;
-    //     });
-    //   }
-    //   return newDataFormat;
-    // }
-  }
 }

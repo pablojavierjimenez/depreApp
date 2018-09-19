@@ -13,8 +13,8 @@ export class DomElements {
     this.inputDate = document.getElementById('start_day');
     this.inputSalary = document.getElementById('start_salary');
     this.calculateBtn = document.getElementById('calculate');
-    this.salaryInitialinDolars = document.getElementById('salary_start_inDolars');
-    this.salaryInitialinPesos = document.getElementById('salary_start_inPesos');
+    this.salaryInitialInPesos = document.getElementById('salary_start_inPesos');
+    this.salaryInitialInDolars = document.getElementById('salary_start_inDolars');
     this.salaryActual = document.getElementById('salary_actual_inDolars');
     this.salaryActualinPesos = document.getElementById('salary_actual_inPesos');
     this.salaryActualinPesosWithOutDevaluation = document.getElementById('salary_actual_inPesos_without_devaluation');
