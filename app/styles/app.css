@@ -1,3 +1,12 @@
+:root {
+  --white: #fdfdfd;
+  --black: #020202;
+  --blue: #0091ea;
+  --red: #e42929fa;
+  --green: #05791ee8;
+  --yellow: #FFC107;
+}
+
 body, section, header, main, footer, div, span, h1, h2,h3,h4,h5,h6{
   padding: 1.5vmin;
   margin: 0;
@@ -13,7 +22,7 @@ html {
 }
 
 body {
-  background-color: #FFC107;
+  background-color: var(--yellow);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -50,7 +59,7 @@ section {
 .brand {
   width: 60vw;
 }
-/*---- ID ----*/
+/*------- ID ---------*/
 #calculation_section {
   display: flex;
   justify-content: space-between;
@@ -67,16 +76,8 @@ section {
 #slary_range_list > div {
   padding: .15rem;
 }
-
 #results {
   width: 50%;
-}
-.resultado {
-    background-color: #FFC107;
-    color: white;
-    padding: 1vmin;
-    text-align: right;
-    margin: auto;
 }
 #results > div {
   display: flex;
@@ -91,6 +92,21 @@ section {
   width: 30vw;
   padding: 1.5vmin 0;
 }
+.resultado {
+  background-color: var(--yellow);
+  margin: auto;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  box-shadow: 0 2px 2px rgba(154,154,155,0.75);
+  border: none;
+  outline: none;
+}
+/*------------------*/
+
+/*----- CLASS -------*/
 .card {
   background-color: white;
   border: none;
@@ -116,13 +132,12 @@ section {
   border: none;
   outline: none;
 }
-
 .btn_default:active {
   color: #0091EA;
   background-color: #ffffff;
 }
 .yellow_chart {
-  color: #FFC107;
+  color: var(--yellow);
   padding: 0;
 }
 .yellow_sun {
@@ -160,6 +175,72 @@ section {
   letter-spacing: 1px;
   line-height: 24px;
 }
+label {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+footer {
+  box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.37);
+}
+/*------------------*/
+
+
+/*----- .card -------*/
+.card_body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moneyValue_container {
+  border: dotted 1px red;
+  width: 50%;
+  display: flex;
+}
+.sign_cotainer {
+  margin-right: 0;
+  width: 30%;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(154,154,155,0.75);
+}
+.peso_sign {
+  color: var(--yellow);
+  font-weight: bold;
+  border: solid var(--blue);
+  box-sizing: border-box;
+}
+.dollar_sign {
+  color: red;
+  font-weight: bold;
+  border: solid #2105b1;
+  border-right: solid var(--green);
+  box-sizing: border-box;
+}
+.dollar_special{
+  color: #2105b1;
+  margin: 0;
+  padding: 0;
+}
+
+.peso_container,
+.dollar_container {
+  border-radius: 0px 4px 4px 0;
+  width: 70%;
+  margin-left: 0;
+}
+
+.peso_container {
+  background-color: var(--blue);
+  border: solid var(--blue);
+}
+.dollar_container {
+  background-color: var(--green);
+  border: solid var(--green);
+}
+/*------------------*/
+
+/*----- MEDIA QUERY -------*/
 @media only screen and (max-width: 600px) {
     body {
       background-color: white;
@@ -171,7 +252,7 @@ section {
     footer {
       position: fixed;
       min-width: 100vw;
-      height: 7vh;
+      height: 8vh;
     }
     footer {
       box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.37);
@@ -184,12 +265,4 @@ section {
       display: block;
     }
 }
-
-label {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-}
-footer {
-  box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.37);
-}
+/*-----------------------*/

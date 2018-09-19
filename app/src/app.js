@@ -1,4 +1,3 @@
-
 import { DomElements } from "./DomElements.class";
 import { Operations } from "./operations.class";
 import BcraUsdService from './bcraUsd.dataservice.class';
@@ -12,12 +11,12 @@ console.log(app);
 
 app.el.calculateBtn.addEventListener('click', (algo) => {
 
-  app.el.salaryInitial.innerText = app.operations.calculateSalaryInitialInDolars(app.el.inputDate.value).toFixed(4);
-  app.el.salaryActual.innerText = app.operations.calculateSalaryFinalInDolars().toFixed(4);
+  app.el.salaryInitialinPesos.innerText = app.el.inputSalary.value;
+  app.el.salaryInitialinDolars.innerText = app.operations.calculateSalaryInitialInDolars(app.el.inputDate.value).toFixed(1);
+  app.el.salaryActual.innerText = app.operations.calculateSalaryFinalInDolars().toFixed(1);
 
-  app.el.salaryActualinPesos.innerText = app.operations.calculateSalaryFinalInPesos().toFixed(4);
-  app.el.salaryActualinPesosWithOutDevaluation.innerText = app.operations.calculateSalaryFinalInPesosWithoutDevaluation().toFixed(4);
+  app.el.salaryActualinPesos.innerText = app.operations.calculateSalaryFinalInPesos().toFixed(1);
+  app.el.salaryActualinPesosWithOutDevaluation.innerText = app.operations.calculateSalaryFinalInPesosWithoutDevaluation().toFixed(1);
 
   console.log('hola changos', app.el.inputDate.value);
 });
-
