@@ -1,0 +1,33 @@
+/*------- RESULTS ---------*/
+#results_section {
+  width: 50%;
+}
+#results_section > div > span {
+  padding: 1.5vmin 0;
+}
+#results_section > div > span:first-child {
+  width: 60vw;
+}
+#results_section > div > span:last-child {
+  width: 30vw;
+}
+.resultado {
+  margin: auto;
+  border-radius: 0 4px 4px 0;
+}
+/*----- .card -------*/
+.card_header {
+  font-weight: 500;
+}
+.sign_cotainer {
+  margin-right: 0;
+  width: 30%;
+  border-radius: 4px 0 0 4px;
+}
+.peso_container,
+.dollar_container {
+  border-radius: 0px 4px 4px 0;
+  width: 70%;
+  margin-left: 0;
+}
+/*------------------*/

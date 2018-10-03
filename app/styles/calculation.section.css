@@ -1,0 +1,16 @@
+/*------- CALCULATION ---------*/
+#calculation_section {
+  margin-bottom: 5vh;
+}
+.btn_default {
+  text-decoration: none;
+  padding: 16px;
+  padding-top: 17px;
+  display: block;
+  width: 150px;
+  margin: 3vh auto 1vh;
+  box-shadow: 0 2px 2px rgba(154,154,155,0.75);
+}
+.btn_default:active {
+  color:  var(--theme_blue);
+}

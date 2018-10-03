@@ -8,17 +8,14 @@
   <title>Depre App : a personal challenge, whitch goal is make other peoples cry... and it is an incredible sucsses!!!</title>
 
   <link rel="stylesheet" href="styles/app.css">
-  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
-
 </head>
 
-<body class="body">
-  <pre id="gettedFromFBDB"></pre>
-  <header class="header">
-    <h1 class="brand" >D<span class="yellow_chart">e</span>pre App</h1>
+<body>
+  <header>
+    <h1 class="brand">D<span class="yellow_chart">e</span>pre App</h1>
     <span class="yellow_sun">🌞</span>
   </header>
-  <main class="main">
+  <main>
     <section id="calculation_section" class="card">
       <section id="input_data">
         <label for="start_day">
@@ -36,7 +33,10 @@
         <button id="calculate" class="btn_default">Wanna Cry?</button>
       </section>
 
-      <section id="results_section">
+      <pre id="pre"></pre>
+
+      <section id="results">
+
         <article class="card">
           <section class="card_header">Sueldo inicial</section>
           <section class="card_body">
@@ -93,7 +93,7 @@
       <div>para un sueldo de 100.000 -> 70426</div>
     </section>
   </main>
-  <footer class="footer">
+  <footer>
     and now... make cry a friend 😈
   </footer>
   <script src="src/app.js"></script>

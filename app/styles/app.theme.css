@@ -1,0 +1,121 @@
+.header,
+.footer,
+.card_body,
+.moneyValue_container,
+#calculation_section,
+#results_section > div {
+  display: flex;
+}
+#calculation_section,
+#slary_range_list {
+  margin: 2vh auto;
+}
+#input_data,
+#results_sectio,
+.moneyValue_container {
+  width: 50%;
+}
+#results_section > div,
+.input {
+  font-weight: bolder;
+}
+#calculation_section,
+.header,
+.footer,
+.card_body {
+  justify-content: space-between;
+}
+.resultado,
+.btn_default,
+.sign_cotainer,
+.yellow_sun {
+  text-align: center;
+}
+.resultado,
+.btn_default {
+  font-weight: 300;
+}
+.resultado,
+.card,
+.btn_default {
+  border: none;
+  outline: none;
+}
+.resultado,
+.card,
+.input {
+  width: 100%;
+}
+.card,
+.btn_default {
+  border-radius: 4px;
+}
+.resultado,
+.card_header,
+.btn_default {
+  text-transform: uppercase;
+}
+.peso_sign,
+.dollar_sign {
+  font-weight: bold;
+}
+.yellow_chart,
+.dollar_special {
+  padding: 0;
+}
+
+/*------ THEME COLORS ------*/
+.body,
+.main,
+.resultado {
+  background-color: var(--theme_yellow);
+}
+.resultado {
+  border: solid var(--theme_yellow);
+}
+.card_header {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  color: var(--theme_violet);
+}
+.dollar_sign {
+  color: red;
+  border: solid #2105b1;
+  border-right: solid var(--theme_green);
+}
+.dollar_special {
+  color: #2105b1;
+}
+.dollar_container {
+  background-color: var(--theme_green);
+  border: solid var(--theme_green);
+  color: var(--theme_white);
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.shouldBe_container {
+  border-right: var(--theme_blue);
+}
+/*--------------------*/
+
+.footer,
+.btn_default {
+}
+.header,
+.footer,
+.brand,
+.btn_default,
+.yellow_chart,
+.peso_container {
+  background-color: var(--theme_blue);
+  color: var(--theme_white);
+}
+.yellow_chart,
+.peso_sign,
+.yellow_chart {
+  color: var(--theme_yellow);
+}
+.peso_container,
+.peso_sign {
+  border: solid var(--theme_blue);
+}
